@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FaceDetectionApp</string>
+    <string name="action_settings">Settings</string>
+
+    <!--dialog_settings -->
+    <string name="dialog_settings_btn_positive">OK</string>
+    <string name="dialog_settings_btn_negative">Cancel</string>
+
+    <!--fd_activity -->
+    <string name="download">Download</string>
+    <string name="recreate">Recreate</string>
+
+
+</resources>
