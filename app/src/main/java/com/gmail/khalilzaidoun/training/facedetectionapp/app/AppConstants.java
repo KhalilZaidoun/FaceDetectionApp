@@ -3,7 +3,7 @@ package com.gmail.khalilzaidoun.training.facedetectionapp.app;
 
 import org.opencv.core.Scalar;
 
-public class AppConfig {
+public class AppConstants {
 
     public static final String APP_NAME = "FaceDetectionApp";
 

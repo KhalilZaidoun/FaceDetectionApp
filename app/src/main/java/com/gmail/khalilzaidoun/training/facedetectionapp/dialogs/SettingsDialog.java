@@ -13,7 +13,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.gmail.khalilzaidoun.training.facedetectionapp.R;
-import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppConfig;
+import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppConstants;
 import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppSettings;
 
 public class SettingsDialog extends DialogFragment implements SeekBar.OnSeekBarChangeListener {
@@ -92,29 +92,29 @@ public class SettingsDialog extends DialogFragment implements SeekBar.OnSeekBarC
             matchTemplateMethodIndexTemporal = progress;
             switch (progress) {
 
-                case AppConfig.TM_SQDIFF_INDEX:
-                    textViewMethod.setText(AppConfig.TM_SQDIFF);
-                    matchTemplateMethodValueTemporal = AppConfig.TM_SQDIFF;
+                case AppConstants.TM_SQDIFF_INDEX:
+                    textViewMethod.setText(AppConstants.TM_SQDIFF);
+                    matchTemplateMethodValueTemporal = AppConstants.TM_SQDIFF;
                     break;
-                case AppConfig.TM_SQDIFF_NORMED_INDEX:
-                    textViewMethod.setText(AppConfig.TM_SQDIFF_NORMED);
-                    matchTemplateMethodValueTemporal = AppConfig.TM_SQDIFF_NORMED;
+                case AppConstants.TM_SQDIFF_NORMED_INDEX:
+                    textViewMethod.setText(AppConstants.TM_SQDIFF_NORMED);
+                    matchTemplateMethodValueTemporal = AppConstants.TM_SQDIFF_NORMED;
                     break;
-                case AppConfig.TM_CCOEFF_INDEX:
-                    textViewMethod.setText(AppConfig.TM_CCOEFF);
-                    matchTemplateMethodValueTemporal = AppConfig.TM_CCOEFF;
+                case AppConstants.TM_CCOEFF_INDEX:
+                    textViewMethod.setText(AppConstants.TM_CCOEFF);
+                    matchTemplateMethodValueTemporal = AppConstants.TM_CCOEFF;
                     break;
-                case AppConfig.TM_CCOEFF_NORMED_INDEX:
-                    textViewMethod.setText(AppConfig.TM_CCOEFF_NORMED);
-                    matchTemplateMethodValueTemporal = AppConfig.TM_CCOEFF_NORMED;
+                case AppConstants.TM_CCOEFF_NORMED_INDEX:
+                    textViewMethod.setText(AppConstants.TM_CCOEFF_NORMED);
+                    matchTemplateMethodValueTemporal = AppConstants.TM_CCOEFF_NORMED;
                     break;
-                case AppConfig.TM_CCORR_INDEX:
-                    textViewMethod.setText(AppConfig.TM_CCORR);
-                    matchTemplateMethodValueTemporal = AppConfig.TM_CCORR;
+                case AppConstants.TM_CCORR_INDEX:
+                    textViewMethod.setText(AppConstants.TM_CCORR);
+                    matchTemplateMethodValueTemporal = AppConstants.TM_CCORR;
                     break;
-                case AppConfig.TM_CCORR_NORMED_INDEX:
-                    textViewMethod.setText(AppConfig.TM_CCORR_NORMED);
-                    matchTemplateMethodValueTemporal = AppConfig.TM_CCORR_NORMED;
+                case AppConstants.TM_CCORR_NORMED_INDEX:
+                    textViewMethod.setText(AppConstants.TM_CCORR_NORMED);
+                    matchTemplateMethodValueTemporal = AppConstants.TM_CCORR_NORMED;
                     break;
             }
         } else if (seekBar.getId() == R.id.seek_bar_face_size) {
@@ -122,21 +122,21 @@ public class SettingsDialog extends DialogFragment implements SeekBar.OnSeekBarC
             minFaceSizeIndexTemporal = progress;
             switch (progress) {
 
-                case AppConfig.MIN_FACE_SIZE_20_INDEX:
-                    textViewFaceSise.setText(AppConfig.MIN_FACE_SIZE_20);
-                    matchTemplateMethodValueTemporal = AppConfig.MIN_FACE_SIZE_20;
+                case AppConstants.MIN_FACE_SIZE_20_INDEX:
+                    textViewFaceSise.setText(AppConstants.MIN_FACE_SIZE_20);
+                    matchTemplateMethodValueTemporal = AppConstants.MIN_FACE_SIZE_20;
                     break;
-                case AppConfig.MIN_FACE_SIZE_30_INDEX:
-                    textViewFaceSise.setText(AppConfig.MIN_FACE_SIZE_30);
-                    matchTemplateMethodValueTemporal = AppConfig.MIN_FACE_SIZE_30;
+                case AppConstants.MIN_FACE_SIZE_30_INDEX:
+                    textViewFaceSise.setText(AppConstants.MIN_FACE_SIZE_30);
+                    matchTemplateMethodValueTemporal = AppConstants.MIN_FACE_SIZE_30;
                     break;
-                case AppConfig.MIN_FACE_SIZE_40_INDEX:
-                    textViewFaceSise.setText(AppConfig.MIN_FACE_SIZE_40);
-                    matchTemplateMethodValueTemporal = AppConfig.MIN_FACE_SIZE_40;
+                case AppConstants.MIN_FACE_SIZE_40_INDEX:
+                    textViewFaceSise.setText(AppConstants.MIN_FACE_SIZE_40);
+                    matchTemplateMethodValueTemporal = AppConstants.MIN_FACE_SIZE_40;
                     break;
-                case AppConfig.MIN_FACE_SIZE_50_INDEX:
-                    textViewFaceSise.setText(AppConfig.MIN_FACE_SIZE_50);
-                    matchTemplateMethodValueTemporal = AppConfig.MIN_FACE_SIZE_50;
+                case AppConstants.MIN_FACE_SIZE_50_INDEX:
+                    textViewFaceSise.setText(AppConstants.MIN_FACE_SIZE_50);
+                    matchTemplateMethodValueTemporal = AppConstants.MIN_FACE_SIZE_50;
                     break;
 
             }

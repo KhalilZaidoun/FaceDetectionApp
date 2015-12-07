@@ -1,7 +1,7 @@
 package com.gmail.khalilzaidoun.training.facedetectionapp.utils;
 
 
-import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppConfig;
+import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppConstants;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -43,7 +43,7 @@ public class DetectUtils {
             e.y = area.y + e.y;
 
             Rect eye_only_rectangle = new Rect((int) e.tl().x,
-                    (int) (e.tl().y + e.height * 0.4), (int) e.width,
+                    (int) (e.tl().y + e.height * 0.4), e.width,
                     (int) (e.height * 0.6));
             mROI = mGray.submat(eye_only_rectangle);
             Mat vyrez = mRgba.submat(eye_only_rectangle);
@@ -79,24 +79,24 @@ public class DetectUtils {
         Mat mResult = new Mat(result_cols, result_rows, CvType.CV_8U);
 
         switch (type) {
-            case AppConfig.TM_SQDIFF_INDEX:
+            case AppConstants.TM_SQDIFF_INDEX:
                 Imgproc.matchTemplate(mROI, mTemplate, mResult, Imgproc.TM_SQDIFF);
                 break;
-            case AppConfig.TM_SQDIFF_NORMED_INDEX:
+            case AppConstants.TM_SQDIFF_NORMED_INDEX:
                 Imgproc.matchTemplate(mROI, mTemplate, mResult,
                         Imgproc.TM_SQDIFF_NORMED);
                 break;
-            case AppConfig.TM_CCOEFF_INDEX:
+            case AppConstants.TM_CCOEFF_INDEX:
                 Imgproc.matchTemplate(mROI, mTemplate, mResult, Imgproc.TM_CCOEFF);
                 break;
-            case AppConfig.TM_CCOEFF_NORMED_INDEX:
+            case AppConstants.TM_CCOEFF_NORMED_INDEX:
                 Imgproc.matchTemplate(mROI, mTemplate, mResult,
                         Imgproc.TM_CCOEFF_NORMED);
                 break;
-            case AppConfig.TM_CCORR_INDEX:
+            case AppConstants.TM_CCORR_INDEX:
                 Imgproc.matchTemplate(mROI, mTemplate, mResult, Imgproc.TM_CCORR);
                 break;
-            case AppConfig.TM_CCORR_NORMED_INDEX:
+            case AppConstants.TM_CCORR_NORMED_INDEX:
                 Imgproc.matchTemplate(mROI, mTemplate, mResult,
                         Imgproc.TM_CCORR_NORMED);
                 break;
@@ -104,7 +104,7 @@ public class DetectUtils {
 
         Core.MinMaxLocResult mmres = Core.minMaxLoc(mResult);
         // there is difference in matching methods - best match is max/min value
-        if (type == AppConfig.TM_SQDIFF_INDEX || type == AppConfig.TM_SQDIFF_NORMED_INDEX) {
+        if (type == AppConstants.TM_SQDIFF_INDEX || type == AppConstants.TM_SQDIFF_NORMED_INDEX) {
             matchLoc = mmres.minLoc;
         } else {
             matchLoc = mmres.maxLoc;

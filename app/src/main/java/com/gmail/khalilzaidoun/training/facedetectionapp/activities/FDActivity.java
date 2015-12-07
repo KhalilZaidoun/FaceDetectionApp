@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.gmail.khalilzaidoun.training.facedetectionapp.R;
-import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppConfig;
+import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppConstants;
 import com.gmail.khalilzaidoun.training.facedetectionapp.app.AppSettings;
 import com.gmail.khalilzaidoun.training.facedetectionapp.helper.CustomLoaderCallback;
 import com.gmail.khalilzaidoun.training.facedetectionapp.ui.opencv.MyOpenCvCameraView;
@@ -197,7 +197,7 @@ public class FDActivity extends AppCompatActivity implements CameraBridgeViewBas
         Rect[] facesArray = faces.toArray();
         for (Rect aFacesArray : facesArray) {
             Imgproc.rectangle(DetectUtils.mRgba, aFacesArray.tl(), aFacesArray.br(),
-                    AppConfig.FACE_RECT_COLOR, 3);
+                    AppConstants.FACE_RECT_COLOR, 3);
             xCenter = (aFacesArray.x + aFacesArray.width + aFacesArray.x) / 2;
             yCenter = (aFacesArray.y + aFacesArray.y + aFacesArray.height) / 2;
             Point center = new Point(xCenter, yCenter);
@@ -266,19 +266,19 @@ public class FDActivity extends AppCompatActivity implements CameraBridgeViewBas
 
         switch (AppSettings.minFaceSizeIndex) {
 
-            case AppConfig.MIN_FACE_SIZE_20_INDEX:
+            case AppConstants.MIN_FACE_SIZE_20_INDEX:
 
                 faceSize = 0.2f;
                 break;
-            case AppConfig.MIN_FACE_SIZE_30_INDEX:
+            case AppConstants.MIN_FACE_SIZE_30_INDEX:
 
                 faceSize = 0.3f;
                 break;
-            case AppConfig.MIN_FACE_SIZE_40_INDEX:
+            case AppConstants.MIN_FACE_SIZE_40_INDEX:
 
                 faceSize = 0.4f;
                 break;
-            case AppConfig.MIN_FACE_SIZE_50_INDEX:
+            case AppConstants.MIN_FACE_SIZE_50_INDEX:
 
                 faceSize = 0.5f;
                 break;
